@@ -1,0 +1,10 @@
+---
+export interface Props {
+  delay: number;
+}
+
+const {delay} = Astro.props as Props;
+
+await new Promise(resolve => setTimeout(resolve, delay));
+---
+<div>{delay}</div>
